@@ -16,7 +16,7 @@ def download_model():
     )
 
     model = StableDiffusionPipeline.from_pretrained(
-        "camenduru/webui", 
+        "nolanaatama/stable-diffusion-webui", 
         scheduler=lms,
         use_auth_token="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"
     )
