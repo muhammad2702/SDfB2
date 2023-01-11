@@ -16,9 +16,9 @@ def download_model():
     )
 
     model = StableDiffusionPipeline.from_pretrained(
-        "CompVis/stable-diffusion-v1-4", 
+        "cmdr2/stable-diffusion-ui", 
         scheduler=lms,
-        use_auth_token=HF_AUTH_TOKEN
+        use_auth_token="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"
     )
 
 if __name__ == "__main__":
