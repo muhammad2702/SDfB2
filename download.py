@@ -7,7 +7,7 @@ import os
 def download_model():
     # do a dry run of loading the huggingface model, which will download weights at build time
     #Set auth token which is required to download stable diffusion model weights
-    HF_AUTH_TOKEN = os.getenv("HF_AUTH_TOKEN")
+    HF_AUTH_TOKEN = os.getenv("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")
 
     lms = LMSDiscreteScheduler(
         beta_start=0.00085, 
@@ -16,7 +16,7 @@ def download_model():
     )
 
     model = StableDiffusionPipeline.from_pretrained(
-        "cmdr2/stable-diffusion-ui", 
+        "camenduru/webui", 
         scheduler=lms,
         use_auth_token="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"
     )
