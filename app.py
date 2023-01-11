@@ -14,14 +14,14 @@ def init():
     # this will substitute the default PNDM scheduler for K-LMS  
     lms = LMSDiscreteScheduler(beta_start=0.00085, beta_end=0.012, beta_schedule="scaled_linear")
 
-    model = StableDiffusionPipeline.from_pretrained("camenduru/webui", scheduler=lms, use_auth_token=HF_AUTH_TOKEN).to("cuda")
+    model = StableDiffusionPipeline.from_pretrained("nolanaatama/stable-diffusion-webui", scheduler=lms, use_auth_token=HF_AUTH_TOKEN).to("cuda")
 
 # Inference is ran for every server call
 # Reference your preloaded global model variable here.
 def inference(model_inputs:dict) -> dict:
     global model
 
-    # Parse out your arguments
+    # Parse out your argumentsnolanaatama/stable-diffusion-webui
     prompt = model_inputs.get('prompt', None)
     height = model_inputs.get('height', 512)
     width = model_inputs.get('width', 512)
